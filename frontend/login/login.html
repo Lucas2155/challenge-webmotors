@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Webmonitors</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="logo"><img src="../img/logo.png" alt=""></a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="../index.html#home">Início</a></li>
+            <li><a href="../index.html#ride">Serviços</a></li>
+            <li><a href="../planos/plano.html">Planos</a></li>
+            <li><a href="../garage/garage.html">Garagem</a></li>
+            <li><a href="../index.html#reviews">Sobre</a></li>
+            <li><a href="../index.html#reviews">Opiniões</a></li>
+        </ul>
+    </header>
+    <section class="area-login">
+        <div class="login">
+            <div>
+                <img src="../img/logo.png">
+            </div>
+
+            <form method="POST" action="../dashboard/dashboard.html">
+                <input type="text" name="nome" placeholder="Usuário" autofocus>
+                <input type="password" name="senha" placeholder="Senha">
+                <input type="submit" value="Entrar">
+            </form>
+            <p>Ainda não tem uma conta?<a href="../cadastro/cadastro.html">Cadastre-se</a></p>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Link To JS -->
+    <script src="../main.js"></script>
+</body>
+
+</html>

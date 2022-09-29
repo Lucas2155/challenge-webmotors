@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webmonitors</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="../img/logo.png">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="../profile/profile.html">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Perfil</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Painel Central</h3>
+                </a>
+                <a href="../report/report.html">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Relatório</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">mail_outline</span>
+                    <h3>Mensagens</h3>
+                    <span class="message-count">26</span>
+                </a>
+                <a href="../myCars/myCars.html">
+                    <span class="material-icons-sharp">directions_car</span>
+                    <h3>Meus carros</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">support_agent</span>
+                    <h3>Suporte</h3>
+                </a>
+                <a href="../config-user/config.html">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Configuração</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">add</span>
+                    <h3>Adicionar veículo</h3>
+                </a>
+                <a href="../index.html">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Sair</h3>
+                </a>
+            </div>
+        </aside>
+        <main>
+            <h1>Painel Central</h1>
+
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="insights">
+                <div class="sales">
+                    <span class="material-icons-sharp">savings</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Arrecadado</h3>
+                            <h1>R$250.400</h1>
+                        </div>
+                    </div>
+                    <small class="text-muted">Último mês</small>
+                </div>
+                <div class="income">
+                    <span class="material-icons-sharp">speed</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Média de KM</h3>
+                            <h1>110 KM</h1>
+                        </div>
+                    </div>
+                    <small class="text-muted">Últimas 24 horas</small>
+                </div>
+                <div class="expenses">
+                    <span class="material-icons-sharp">device_thermostat</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Média da Temperatura do Motor</h3>
+                            <h1>80°C</h1>
+                        </div>
+                    </div>
+                    <small class="text-muted">Últimas 24 horas</small>
+                </div>
+            </div>
+
+            <div class="recent-orders">
+                <h2>Atividades Recentes</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome do carro</th>
+                            <th>Placa do carro</th>
+                            <th>Tipo</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Honda Civic Si</td>
+                            <td>BRA2E16</td>
+                            <td>Compra</td>
+                            <td class="warning">Pendente</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Honda HR-V</td>
+                            <td>LSN4I09</td>
+                            <td>Aluguel</td>
+                            <td class="success">Aprovado</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Chevrolet Onix</td>
+                            <td>BRA0S29</td>
+                            <td>Aluguel</td>
+                            <td class="success">Aprovado</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>BMW X1</td>
+                            <td>EKY1B38</td>
+                            <td>Compra</td>
+                            <td class="warning">Pendente</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Jeep Compass</td>
+                            <td>RTE5B45</td>
+                            <td>Compra</td>
+                            <td class="success">Aprovado</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Nissan Kicks</td>
+                            <td>QPB9J93</td>
+                            <td>Aluguel</td>
+                            <td class="danger">Negado</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                        <tr>
+                            <td>Renault Logan</td>
+                            <td>EAJ2C62</td>
+                            <td>Aluguel</td>
+                            <td class="success">Aprovado</td>
+                            <td class="primary">Detalhes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Mostrar Mais</a>
+            </div>
+        </main>
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Olá,<b>Mateus</b></p>
+                        <small class="text-muted">Nível 3</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="../img/profile.jpg">
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-updates">
+                <h2>Central de Notificação</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="../img/profile2.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Roberto</b> gostaria de negociar o valor de compra do seu HB20.</p>
+                            <small class="text-muted">2 Horas Atrás</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="../img/profile3.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Carla</b> acabou de alugar o seu Honda HR-V.</p>
+                            <small class="text-muted">3 Horas Atrás</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="../img/profile4.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Júlia</b> acabou de comprar o seu Honda Civic Si.</p>
+                            <small class="text-muted">10 Horas Atrás</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sales-analytics">
+                <h2>Seus Produtos</h2>
+                <div class="item online">
+                    <div class="icon">
+                        <span class="material-icons-sharp">saved_search</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>MONITORAMENTO AVANÇADO</h3>
+                            <small class="text-muted">2 anos</small>
+                </div>
+                <h5 class="success"></h5>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="item offline">
+            <div class="icon">
+                <span class="material-icons-sharp">support_agent</span>
+            </div>
+            <div class="right">
+                <div class="info">
+                    <h3>SUPORTE BUSINESS</h3>
+                    <small class="text-muted">1 ano</small>
+        </div>
+        <h5 class="danger"></h5>
+        <h3></h3>
+    </div>
+</div>
+<div class="item customers">
+    <div class="icon">
+        <span class="material-icons-sharp">verified_user</span>
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>SEGURANÇA VEICULAR</h3>
+            <small class="text-muted">1 ano</small>
+</div>
+<h5 class="success"></h5>
+<h3></h3>
+</div>
+</div>
+<div class="item add-product">
+    <div>
+        <span class="material-icons-sharp">add</span>
+        <h3>Adquirir novos serviços</h3>
+    </div>
+</div>
+    </div>
+
+    <script src="../main.js"></script>
+</body>
+</html>

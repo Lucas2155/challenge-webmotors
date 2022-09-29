@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Webmonitors</title>
+</head>
+<body>
+  <div class="login">
+    <div>
+        <img src="logo.png">
+    </div>
+  </div>
+    <div class="inputField">
+        <h2>Gere uma senha e envie para desbloquear a caixa de segurança</h2>
+        <input type="text" name="" placeholder="A sua senha aparecerá aqui" id="password" readonly="">
+        <div id="btn" onclick="getPassword()">Gerar Senha</div>
+        <div id="copyBtn">Enviar Senha</div>
+    </div>
+<div id="myModal" class="modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Aviso</h5>
+      </div>
+      <div class="modal-body">
+        <p>Senha enviada com sucesso.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="closeBtn()" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+
+    function getPassword(){
+        $.get("http://localhost:3030/getnumber", function(data, status){
+      document.getElementById("password").value = data.number
+    });
+        
+    }
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("copyBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+    modal.style.display = "block";
+    var copyPassword = document.getElementById("password");
+    copyPassword.select();
+    copyPassword.setSelectionRange(0,999);
+    document.execCommand("copy");
+    }
+
+    span.onclick = function() {
+    modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+     if (event.target == modal) {
+      modal.style.display = "none";
+      }
+    }
+    
+    function closeBtn(){
+        modal.style.display = "none";
+    }
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="getAPI.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
